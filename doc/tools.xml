@@ -1,0 +1,165 @@
+<tools>
+  <tool>
+    <name>autoconf</name>
+    <desc>
+      Creates a script which analyzes the target for any needed information and
+      provides that information to the program by using macros.
+    </desc>
+    <benefit>Build simplification</benefit>
+  </tool>
+  <tool>
+    <name>automake</name>
+    <desc>
+      Creates a make file which uses the information autoconf provided to
+      perform potentially complex build processes using a very simple set of
+      make targets.
+    </desc>
+    <benefit>Build simplification</benefit>
+  </tool>
+  <tool>
+    <name>doxygen</name>
+    <desc>
+      Generates easy-to-read documentation in a variety of formats by using
+      javadoc-style docblocks placed throughout the code.
+    </desc>
+    <benefit>Documentation simplification</benefit>
+  </tool>
+  <tool>
+    <name>dejagnu</name>
+    <desc>
+      Centralized testing suite that runs collections of tests written in
+      expect, but can also be used for unit testing.
+    </desc>
+    <benefit>Test automation and unification</benefit>
+  </tool>
+  <tool>
+    <name>valgrind</name>
+    <desc>
+      Analyzes memory usage for potential memory leaks, heap overflows, and
+      many other memory-related performance, stability, and security problems.
+    </desc>
+    <benefit>Robust memory analysis</benefit>
+  </tool>
+  <tool>
+    <name>gcov</name>
+    <desc>
+      Simple code coverage tool that requires certain GCC flags.
+    </desc>
+    <benefit>Test sufficiency analysis</benefit>
+  </tool>
+  <tool>
+    <name>gprof</name>
+    <desc>
+      A good code profiling tool that requires certain GCC flags.
+    </desc>
+    <benefit>Runtime performance analysis</benefit>
+  </tool>
+  <tool arguable="yes">
+    <name>libtool</name>
+    <desc>
+      A tool that greatly simplifies the process of creating a shared library
+      when combined with automake.
+    </desc>
+    <benefit>Build simplification (in we're building a library)</benefit>
+  </tool>
+  <tool>
+    <name>pkg-config</name>
+    <desc>
+      A tool which generates a metadata file which describes the package, any
+      configuration options, any compiler flags, and any other data that would
+      be helpful to another application being built or installed that would
+      like to use this application as a dependency.
+    </desc>
+    <benefit>Build simplification for any future dependent software</benefit>
+  </tool>
+  <tool arguable="yes">
+    <name>gettext</name>
+    <desc>
+      A library and toolset that greatly simplifies the process of adding
+      internationalization support to an application.
+    </desc>
+    <benefit>Internationalization support and simplification</benefit>
+  </tool>
+</tools>
+<libs>
+  <lib>
+    <name>libmicrohttpd</name>
+    <desc>
+      Library for adding a minimal HTTPD server to a C program.
+    </desc>
+    <purpose>Serving the site API, mobile API, and web frontend</purpose>
+  </lib>
+  <lib>
+    <name>OpenSSL</name>
+    <desc>
+      Library for working with SSL connections and some related tasks.
+    </desc>
+    <purpose>Encryption and decryption, SSL tunnels for libmicrohttpd</purpose>
+  </lib>
+  <lib>
+    <name>cURL</name>
+    <desc>
+      Library for making HTTP client calls.
+    </desc>
+    <purpose>Communicating with AWS API, maybe Google and Apple also</purpose>
+  </lib>
+  <lib arguable="yes">
+    <name>gettext</name>
+    <desc>
+      A library and toolset that greatly simplifies the process of adding
+      internationalization support to an application.
+    </desc>
+    <purpose>Internationalization support and simplification</purpose>
+  </lib>
+</libs>
+<services>
+  <service>
+    <name>EC2</name>
+    <desc>
+      Amazon Web Services Elastic Compute Cloud, a cloud server provider.
+    </desc>
+    <purpose>Running the program</purpose>
+  </service>
+  <service>
+    <name>DynamoDB</name>
+    <desc>
+      Amazon Web Services DynamoDB, a fast and scalable key-value store.
+    </desc>
+    <purpose>Long-term storage of connection attempts</purpose>
+  </service>
+  <service>
+    <name>EBS</name>
+    <desc>
+      Amazon Web Services Elastic Block Store, a persistent filesystem for EC2.
+    </desc>
+    <purpose>Short-term storage of logs</purpose>
+  </service>
+  <service>
+    <name>S3</name>
+    <desc>
+      Amazon Web Services Simple Storage Server, a simple and cheap filesystem.
+    </desc>
+    <purpose>Long-term storage of log summaries and site icons</purpose>
+  </service>
+  <service>
+    <name>ElastiCache</name>
+    <desc>
+      Amazon Web Services ElastiCache, an in-memory cache system.
+    </desc>
+    <purpose>Short-term storage of requests, icons, keys, etc.</purpose>
+  </service>
+  <service>
+    <name>RDB</name>
+    <desc>
+      Amazon Web Services Relational DataBase, a traditional database.
+    </desc>
+    <purpose>Long-term storage of user and site metadata</purpose>
+  </service>
+  <service>
+    <name>Glacier</name>
+    <desc>
+      Amazon Web Services Glacier, a very cheap long-term data vault.
+    </desc>
+    <purpose>Backups, long-term storage of verbose logs</purpose>
+  </service>
+</services>
