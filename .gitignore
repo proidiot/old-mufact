@@ -1,9 +1,7 @@
-# http://www.gnu.org/software/automake
-
+# Automake specific
 Makefile.in
 
-# http://www.gnu.org/software/autoconf
-
+# Autoconf specific
 /autom4te.cache
 /aclocal.m4
 /compile
@@ -11,3 +9,17 @@ Makefile.in
 /depcomp
 /install-sh
 /missing
+
+# C specific
+*.o
+*.a
+*.la
+*.so
+*.so.*
+*.out
+
+# Vi specific
+*~
+*.swp
+*.swo
+
