@@ -1,0 +1,82 @@
+<terms>
+  <term>
+    <name>authenticator</name>
+    <definition>The entity that authenticates (in this case, Mufact).</definition>
+  </term>
+  <term>
+    <name>provider</name>
+    <definition>The entity offering a service that should be authenticated to.</definition>
+  </term>
+  <term>
+    <name>provided service</name>
+    <definition>The service that the provider provides (and that the authenticator should authenticate for).</definition>
+  </term>
+  <term>
+    <name>provider credentials</name>
+    <definition>The information that the provider uses to authenticate itself to the authenticator.</definition>
+  </term>
+  <term>
+    <name>user</name>
+    <definition>The individual who uses the provided service.</definition>
+  </term>
+  <term>
+    <name>device</name>
+    <definition>The item the user utilizes to authenticate to the provided service.</definition>
+  </term>
+  <term>
+    <name>authenticator key</name>
+    <definition>The key pair that the authenticator uses to encrypt all communications with the device.</definition>
+  </term>
+  <term>
+    <name>authenticator super key</name>
+    <definition>The key pair that the authenticator uses to exclusively encrypt the new authenticator keys.</definition>
+  </term>
+  <term>
+    <name>device key</name>
+    <definition>The key pair that the device uses to encrypt all communications with the authenticator</definition>
+  </term>
+  <term>
+    <name>authentication request</name>
+    <definition>A request from the authenticator initiated by the provider to authenticate the user to the provided service.</definition>
+  </term>
+  <term>
+    <name>authentication prompt</name>
+    <definition>The dialog the user sees on the device that allows them to initiate an authentication response in response to an authentication request.</definition>
+  </term>
+  <term>
+    <name>authentication ressponse</name>
+    <definition>The response that the user makes to the authentication request (i.e. allow, deny, expire).</definition>
+  </term>
+  <term>
+    <name>authenticator panel</name>
+    <definition>The interface that the authenticator provides directly to the user to allow them to see their authentication history.</definition>
+  </term>
+  <term>
+    <name>user authentication history</name>
+    <definition>The collection of all authentication requests and corresponding authentication responses for a user.</definition>
+  </term>
+  <term>
+    <name>provider authentication history</name>
+    <definition>The collection of all authentication requests and corresponding authentication responses for a provider (will likely be quite long)).</definition>
+  </term>
+  <term>
+    <name></name>
+    <definition></definition>
+  </term>
+  <term>
+    <name></name>
+    <definition></definition>
+  </term>
+  <term>
+    <name></name>
+    <definition></definition>
+  </term>
+  <term>
+    <name></name>
+    <definition></definition>
+  </term>
+  <term>
+    <name></name>
+    <definition></definition>
+  </term>
+</terms>
