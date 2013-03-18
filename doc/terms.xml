@@ -4,24 +4,24 @@
     <definition>The entity that authenticates (in this case, Mufact).</definition>
   </term>
   <term>
-    <name>provider</name>
+    <name>site</name>
     <definition>The entity offering a service that should be authenticated to.</definition>
   </term>
   <term>
-    <name>provided service</name>
-    <definition>The service that the provider provides (and that the authenticator should authenticate for).</definition>
+    <name>site service</name>
+    <definition>The service that the site provides (and that the authenticator should authenticate for).</definition>
   </term>
   <term>
-    <name>provider credentials</name>
-    <definition>The information that the provider uses to authenticate itself to the authenticator.</definition>
+    <name>site credentials</name>
+    <definition>The information that the site uses to authenticate itself to the authenticator.</definition>
   </term>
   <term>
     <name>user</name>
-    <definition>The individual who uses the provided service.</definition>
+    <definition>The individual who uses the site service.</definition>
   </term>
   <term>
     <name>device</name>
-    <definition>The item the user utilizes to authenticate to the provided service.</definition>
+    <definition>The item the user utilizes to authenticate to the site via the authenticator.</definition>
   </term>
   <term>
     <name>authenticator key</name>
@@ -37,7 +37,7 @@
   </term>
   <term>
     <name>authentication request</name>
-    <definition>A request from the authenticator initiated by the provider to authenticate the user to the provided service.</definition>
+    <definition>A request from the authenticator initiated by the site to authenticate the user to the site service.</definition>
   </term>
   <term>
     <name>authentication prompt</name>
@@ -56,20 +56,40 @@
     <definition>The collection of all authentication requests and corresponding authentication responses for a user.</definition>
   </term>
   <term>
-    <name>provider authentication history</name>
-    <definition>The collection of all authentication requests and corresponding authentication responses for a provider (will likely be quite long)).</definition>
+    <name>site authentication history</name>
+    <definition>The collection of all authentication requests and corresponding authentication responses for a site (will likely be quite long)).</definition>
   </term>
   <term>
-    <name></name>
-    <definition></definition>
+    <name>request id</name>
+    <definition>A unique identifier for an authentication request.</definition>
   </term>
   <term>
-    <name></name>
-    <definition></definition>
+    <name>site id</name>
+    <definition>A unique identifier for a site (viewed by the user).</definition>
   </term>
   <term>
-    <name></name>
-    <definition></definition>
+    <name>timestamp</name>
+    <definition>Approx. number of seconds since midnight 1 Jan 1970 UTC.</definition>
+  </term>
+  <term>
+    <name>request core</name>
+    <definition>The collection of the request id, timestamp, site id, request core type id, and any additional information (as implied by the request core type id).</definition>
+  </term>
+  <term>
+    <name>request bundle</name>
+    <definition>The request core and the authenticator key generated signature of the request core all encrypted with the device key.</definition>
+  </term>
+  <term>
+    <name>response core</name>
+    <definition>The collection of the request id, timestamp, response value, response core type id, and any additional information (as implied by the response core type id).</definition>
+  </term>
+  <term>
+    <name>response value</name>
+    <definition>Literally allow, deny, or expire.</definition>
+  </term>
+  <term>
+    <name>response bundle</name>
+    <definition>The response core and the device key generated signature of the response core all encrypted with the authenticator key.</definition>
   </term>
   <term>
     <name></name>
