@@ -14,6 +14,8 @@ Makefile
 /config.h
 /config.status
 /stamp-h1
+/configure.scan
+/autoscan.log
 
 # C specific
 *.o
@@ -33,4 +35,13 @@ Makefile
 *.gcno
 *.gcda
 *.gcov
+
+# ctags specific
+tags
+TAGS
+TAGS.include
+
+# DejaGnu specific
+site.exp
+*.sum
 
